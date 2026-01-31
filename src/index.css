@@ -14,8 +14,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("/fonts/barlow-condensed-v12-latin-regular.woff2")
-    format("woff2");
+  src: url("/fonts/barlow-condensed-v12-latin-regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -45,6 +44,25 @@
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1440px;
+
+  /*  Spacing*/
+  --spacing-25: 0.125rem;
+  --spacing-50: 0.25rem;
+  --spacing-100: 0.5rem;
+  --spacing-150: 0.75rem;
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-400: 2rem;
+  --spacing-500: 2.5rem;
+  --spacing-600: 3rem;
+  --spacing-800: 4rem;
+  --spacing-1000: 5rem;
+  --spacing-1200: 6rem;
+  --spacing-1600: 8rem;
+
+  /* shadow*/
+  --shadow-87:0 0 0 87px rgba(255, 255, 255, 1);
+  --shadow-88: 0 0 0 88px rgba(255, 255, 255, 1);
 }
 
 /* ==================== RESPONSIVE TYPOGRAPHY ==================== */
@@ -230,3 +248,5 @@
     color: var(--color-light);
   }
 }
+
+
