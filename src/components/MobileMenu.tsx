@@ -42,6 +42,7 @@ function MobileMenu({
             to={href}
             key={label}
             className={({ isActive }) => `flex items-center gap-150 text-white relative ${isActive ? "after:absolute after:w-1 after:top-0 after:bottom-0 after:right-0 after:bg-white":""}`}
+            viewTransition={true}
           >
             <span className={"nav-text font-bold"}>{number}</span>
             <span className={"nav-text"}>{label}</span>

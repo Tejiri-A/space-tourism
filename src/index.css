@@ -61,7 +61,7 @@
   --spacing-1600: 8rem;
 
   /* shadow*/
-  --shadow-87:0 0 0 87px rgba(255, 255, 255, 1);
+  --shadow-87: 0 0 0 87px rgba(255, 255, 255, 1);
   --shadow-88: 0 0 0 88px rgba(255, 255, 255, 1);
 }
 
@@ -107,6 +107,12 @@
   --font-size-nav: 0.875rem; /* 14px mobile */
   --letter-spacing-nav: 0.147rem; /* 2.35px mobile */
   --line-height-nav: 1.05rem; /* 17px mobile */
+
+  /*Background images*/
+  --bg-home: url("/assets/home/background-home-mobile.jpg");
+  --bg-destination: url("/assets/destination/background-destination-mobile.jpg");
+  --bg-crew: url("/assets/crew/background-crew-mobile.jpg");
+  --bg-technology: url("/assets/technology/background-technology-mobile.jpg");
 }
 
 /* Tablet breakpoint (768px and up) */
@@ -140,6 +146,12 @@
     /* Nav text */
     --font-size-nav: 0.875rem; /* 14px tablet */
     --letter-spacing-nav: 0.147rem; /* 2.35px tablet */
+
+    /*Background images*/
+    --bg-home: url("/assets/home/background-home-tablet.jpg");
+    --bg-destination: url("/assets/destination/background-destination-tablet.jpg");
+    --bg-crew: url("/assets/crew/background-crew-tablet.jpg");
+    --bg-technology: url("/assets/technology/background-technology-tablet.jpg");
   }
 }
 
@@ -175,12 +187,18 @@
     --font-size-nav: 1rem; /* 16px desktop */
     --letter-spacing-nav: 0.169rem; /* 2.7px desktop */
     --line-height-nav: 1.2rem; /* 19px desktop */
+
+    /*Background images*/
+    --bg-home: url("/assets/home/background-home-desktop.jpg");
+    --bg-destination: url("/assets/destination/background-destination-desktop.jpg");
+    --bg-crew: url("/assets/crew/background-crew-desktop.jpg");
+    --bg-technology: url("/assets/technology/background-technology-desktop.jpg");
   }
 }
 
-@layer base{
-  body{
-    @apply bg-dark grid grid-rows-[min-content_1fr];
+@layer base {
+  body {
+    @apply bg-dark grid min-h-screen grid-rows-[min-content_1fr];
   }
 }
 
@@ -255,4 +273,27 @@
   }
 }
 
-
+.bg-home {
+  background-image: var(--bg-home);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-destination {
+  background-image: var(--bg-destination);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-crew {
+  background-image: var(--bg-crew);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-technology {
+  background-image: var(--bg-technology);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
