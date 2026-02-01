@@ -178,6 +178,12 @@
   }
 }
 
+@layer base{
+  body{
+    @apply bg-dark grid grid-rows-[min-content_1fr];
+  }
+}
+
 /* ==================== COMPONENT CLASSES ==================== */
 
 @layer components {
