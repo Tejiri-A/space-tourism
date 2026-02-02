@@ -6,7 +6,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("/fonts/bellefair-v14-latin-regular.woff2") format("woff2");
+  src: url("/fonts/bellefair-v15-latin-regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -14,7 +14,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("/fonts/barlow-condensed-v12-latin-regular.woff2") format("woff2");
+  src: url("/fonts/barlow-condensed-v13-latin-regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -22,7 +22,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("/fonts/barlow-v12-latin-regular.woff2") format("woff2");
+  src: url("/fonts/barlow-v13-latin-regular.woff2") format("woff2");
 }
 
 /* ==================== THEME CONFIGURATION ==================== */
@@ -82,8 +82,8 @@
   --line-height-heading-3: 2.5rem; /* 40px mobile */
 
   /* Heading 4 - Subsection headings */
-  --font-size-heading-4: 1.5rem; /* 24px mobile */
-  --line-height-heading-4: 1.75rem; /* 28px mobile */
+  --font-size-heading-4: 1.125rem; /* 24px mobile */
+  --line-height-heading-4: 0.367em; /* 28px mobile */
 
   /* Heading 5 - Small headings */
   --font-size-heading-5: 1.25rem; /* 20px mobile */
@@ -130,6 +130,10 @@
     --font-size-heading-3: 2.5rem; /* 40px tablet */
     --line-height-heading-3: 3rem; /* 48px tablet */
 
+    /* Heading 3 */
+    --font-size-heading-4: 1.5rem; /* 24px tablet */
+    --line-height-heading-4: 0.367em; /* 48px tablet */
+
     /* Heading 5 */
     --font-size-heading-5: 1.5rem; /* 24px tablet */
     --line-height-heading-5: 1.75rem; /* 28px tablet */
@@ -170,6 +174,10 @@
     --font-size-heading-3: 3.5rem; /* 56px desktop */
     --line-height-heading-3: 4rem; /* 64px desktop */
 
+    /* Heading 3 */
+    --font-size-heading-4: 2rem; /* 32px desktop */
+    --line-height-heading-4: 0.367em;
+
     /* Heading 5 */
     --font-size-heading-5: 1.75rem; /* 28px desktop */
     --line-height-heading-5: 2rem; /* 32px desktop */
@@ -198,7 +206,14 @@
 
 @layer base {
   body {
-    @apply bg-dark grid min-h-screen grid-rows-[min-content_1fr];
+    @apply bg-dark min-h-screen;
+  }
+  main {
+    min-height: calc(100vh - 96px);
+
+    @media screen and (min-width: 1024px) {
+      min-height: calc(100vh - 136px);
+    }
   }
 }
 

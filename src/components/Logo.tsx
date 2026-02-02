@@ -6,6 +6,7 @@ function Logo() {
     <Link
       to={"/"}
       className={`inline-block w-fit shrink-0 ${location.pathname === "/" ? "pointer-events-none" : ""}`}
+      viewTransition={true}
     >
       <img
         src={"/assets/shared/logo.svg"}
