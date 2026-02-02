@@ -3,11 +3,13 @@ import LinkToDestination from "../components/LinkToDestination.tsx";
 function Home() {
   return (
     <main
-      className={"p-300 md:px-500 md:py-[128px] lg:flex lg:items-end lg:px-0"}
+      className={
+        "flex items-stretch p-300 md:px-500 md:py-[128px] lg:items-end lg:px-0"
+      }
     >
       <div
         className={
-          "mx-auto flex h-full w-full max-w-277.5 flex-col items-center lg:flex-row lg:items-end"
+          "mx-auto flex w-full max-w-277.5 flex-col items-center lg:flex-row lg:items-end"
         }
       >
         <div className={"flex-1 space-y-300 text-center lg:text-left"}>
