@@ -50,9 +50,26 @@ function Header() {
               }
               viewTransition={true}
             >
-              <span className={"font-bold"}>
-                {index !== 0 ? number : location.pathname !== "/" ? number : ""}
-              </span>
+              {index !== 0 ? (
+                <span className={"font-bold"}>
+                  {index !== 0
+                    ? number
+                    : location.pathname !== "/"
+                      ? number
+                      : ""}
+                </span>
+              ) : location.pathname !== "/" ? (
+                <span className={"font-bold"}>
+                  {index !== 0
+                    ? number
+                    : location.pathname !== "/"
+                      ? number
+                      : ""}
+                </span>
+              ) : (
+                ""
+              )}
+
               <span>{label}</span>
             </NavLink>
           ))}
