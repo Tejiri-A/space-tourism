@@ -1,8 +1,12 @@
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 
 function Logo() {
+  const location = useLocation();
   return (
-    <Link to={"/"} className={"inline-block w-fit"}>
+    <Link
+      to={"/"}
+      className={`inline-block w-fit shrink-0 ${location.pathname === "/" ? "pointer-events-none" : ""}`}
+    >
       <img
         src={"/assets/shared/logo.svg"}
         alt="logo"

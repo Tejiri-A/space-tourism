@@ -25,6 +25,7 @@ function MobileMenu({
       transition={{
         duration: 0.3,
       }}
+      inert={!isOpen}
     >
       <div className={"flex justify-end py-400 pr-300"}>
         <button
@@ -41,8 +42,11 @@ function MobileMenu({
           <NavLink
             to={href}
             key={label}
-            className={({ isActive }) => `flex items-center gap-150 text-white relative ${isActive ? "after:absolute after:w-1 after:top-0 after:bottom-0 after:right-0 after:bg-white":""}`}
+            className={({ isActive }) =>
+              `relative flex items-center gap-150 text-white ${isActive ? "after:absolute after:top-0 after:right-0 after:bottom-0 after:w-1 after:bg-white" : ""}`
+            }
             viewTransition={true}
+            onClick={closeMenu}
           >
             <span className={"nav-text font-bold"}>{number}</span>
             <span className={"nav-text"}>{label}</span>
