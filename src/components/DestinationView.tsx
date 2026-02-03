@@ -22,10 +22,12 @@ function DestinationView() {
         <div className={"flex flex-1 items-center justify-center"}>
           <picture>
             <source srcSet={images.webp} type={"image/webp"} />
+            <source srcSet={images.png} type={"image/png"} />
             <img
               src={images.png}
               alt=""
               className={"size-37.5 md:size-75 lg:size-120"}
+              fetchPriority={"high"}
             />
           </picture>
         </div>
@@ -38,6 +40,7 @@ function DestinationView() {
             >
               {destinations.map(({ name }, index) => (
                 <button
+                  key={index}
                   className={cn(
                     "nav-text text-light relative after:absolute after:right-0 after:bottom-0 after:left-0 after:h-0.5 hover:text-white",
                     currDestination === index

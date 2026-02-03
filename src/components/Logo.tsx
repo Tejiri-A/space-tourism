@@ -12,6 +12,8 @@ function Logo() {
         src={"/assets/shared/logo.svg"}
         alt="logo"
         aria-label={"Navigate to home page"}
+        width={48}
+        height={48}
       />
     </Link>
   );

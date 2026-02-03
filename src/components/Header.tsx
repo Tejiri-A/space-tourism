@@ -43,6 +43,7 @@ function Header() {
         >
           {navLinks.map(({ label, href, number }, index) => (
             <NavLink
+              role={"listitem"}
               to={href}
               key={href}
               className={({ isActive }) =>
