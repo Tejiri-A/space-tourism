@@ -206,7 +206,7 @@
 
 @layer base {
   body {
-    @apply bg-dark min-h-screen;
+    @apply bg-dark min-h-screen overflow-x-hidden;
   }
   main {
     min-height: calc(100vh - 96px);
@@ -311,4 +311,22 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.full-bleed-image {
+  width: calc(100vw + 5px);
+  max-width: none;
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 1200px) {
+  .full-bleed-image {
+    width: 100%;
+    position: static;
+    left: auto;
+    transform: none;
+  }
 }
